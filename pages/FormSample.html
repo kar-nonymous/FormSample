@@ -150,6 +150,18 @@
             else textError.textContent = "Number is incorrect";
         });
 
+        const pwd = document.querySelector('#pwd');
+        const textError = document.querySelector('.text-error');
+        text.addEventListener('input', function()
+        {
+            let passwordRegex= RegExp('^(?=.*[A-Z])(?=.*[0-9])(?=.*[^0-9a-zA-Z])(?!.*[^0-9a-zA-Z].*[^0-9a-zA-Z]).{8,}$');
+            if(passwordRegex.test(test.value))
+            {
+                textError.textContent = "";
+            }
+            else textError.textContent = "Password is not strong enough";
+        });
+
         const salary = document.querySelector('#salary');
         const output = document.querySelector('.salary-output');
         output.textContent = salary.value;
