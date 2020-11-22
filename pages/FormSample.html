@@ -63,6 +63,17 @@
             font-style: italic;
             color: red;
         }
+        /* Media query */
+        @media only screen and (max-width: 350px) {
+            h1 {
+                font-size: 40px;
+                text-align: center;
+            }
+            label{
+                width: 40%;
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -76,6 +87,7 @@
         <div>
             <label for="pwd">password input type: </label>
             <input type="password" id="pwd" name="pwd" required>
+            <error-output class="text-error" for="text"></error-output>
         </div>
         <div>
             <label for="email">email input type: </label>
